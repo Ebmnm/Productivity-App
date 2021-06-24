@@ -1,0 +1,25 @@
+body{
+    background-color:blue;
+    
+}
+
+.side-border {
+    text-align: center;
+    
+    width: 20%;
+    height: 100%;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+}
+
+.todo-list{
+    background-color: chartreuse;
+}
+
+.todo-form{
+    background-color: chocolate;
+}
+
+.todo-text{
+    color:white;
+}
