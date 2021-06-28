@@ -29,9 +29,9 @@ export default function Nav() {
     return (
         <div>
             <NavContainer>
-            <NavLink to="#"> Daily</NavLink>
-            <NavLink to="#" className="side-border"> Custom</NavLink>
-            <NavLink to="#"> Long Term</NavLink>
+            <NavLink to="/"> Daily</NavLink>
+            <NavLink to="/custom" className="side-border"> Custom</NavLink>
+            <NavLink to="/long"> Long Term</NavLink>
             </NavContainer>
         </div>
     )

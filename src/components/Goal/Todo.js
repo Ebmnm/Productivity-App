@@ -1,18 +1,18 @@
 import React, {useState, useRef}  from 'react'
 import TodoInfo from './TodoInfo'
 
-import "./style.css"
+import "../style.css"
 
 
-export default function Todo({todos, setTodos, toggleTodo, setTodoInfo}) {
+export default function Todo({goals, setgoals, toggleTodo, setTodoInfo}) {
 const [info, setInfo] = useState(false)
 const dateRef = useRef()
  
 
 
     function handleTodoClick() {
-        toggleTodo(todos.id)
-        console.log(todos)
+        toggleTodo(goals.id)
+        console.log(goals)
     }
 
 
@@ -26,17 +26,17 @@ const dateRef = useRef()
         // each popup will need data inside it for each todo so we need to use its id, create one for each id 
         //create a info component?? append it to the page???
        
-        //this todos is refering to the todo clicked    @@@@@@@@@@@
-        createInfoPage(todos)
+        //this goals is refering to the todo clicked    @@@@@@@@@@@
+        createInfoPage(goals)
         
     }
 
    function saveDate() {
-console.log(todos)
-setTodos(prevTodos => {
+console.log(goals)
+setgoals(prevTodos => {
     let newTodos = [...prevTodos]
     let todoDate = dateRef.current.value
-        todos.date = todoDate
+        goals.date = todoDate
             return newTodos
         })               
 }
@@ -47,12 +47,12 @@ setTodos(prevTodos => {
     return (
         <div>
             <label>
-                <input type="checkbox" checked={todos.complete} onChange={handleTodoClick} />
-               <p className="todo-text"> {todos.name}</p>
+                <input type="checkbox" checked={goals.complete} onChange={handleTodoClick} />
+               <p className="todo-text"> {goals.name}</p>
             </label>
-           <input type="text" placeholder= {todos.date ? `${todos.date}` : "Date"} onChange={saveDate}  ref={dateRef}/>
+           <input type="text" placeholder= {goals.date ? `${goals.date}` : "Date"} onChange={saveDate}  ref={dateRef}/>
             <button onClick={openInfo}> Info </button>
-        {info ? <TodoInfo todo={todos} key={todos.id} info={info} setInfo={setInfo} setTodos={setTodos}  /> : null}
+        {info ? <TodoInfo goal={goals} key={goals.id} info={info} setInfo={setInfo} setgoals={setgoals}  /> : null}
         </div>
     )
     }

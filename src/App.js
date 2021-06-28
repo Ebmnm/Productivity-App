@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components"
 import Nav from "./components/Nav"
-import TodoList from "./components/TodoList"
-import {BrowserRouter as Router} from "react-router-dom"
+import TodoList from "./components/Todo/TodoList"
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import "./components/style.css"
-import TodoForm from './components/TodoForm';
-
-
+import TodoForm from './components/Todo/TodoForm';
+import TodoComplete from "./components/Todo/TodoComplete"
+import TaskComplete from "./components/Task/TaskComplete"
+import GoalComplete from "./components/Goal/GoalComplete"
 //TODO: 
 // style list/mobile
 //create routes in the nav and find out how to use the same functionallity with different state... copy everything but change state keyword todo??
@@ -24,7 +25,7 @@ left:15vw;
 `
 
 function App() {
-  const [todos, setTodos] = useState([])
+ /*  const [todos, setTodos] = useState([])
 
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
@@ -34,7 +35,7 @@ function App() {
         useEffect(() => {
             localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos))
         }, [todos])
-
+ */
 
        
 //runs twice due to useeffect
@@ -42,8 +43,9 @@ function App() {
 <Router>
 <Container>
 <Nav />
-<TodoForm todos={todos} setTodos={setTodos} />
-<TodoList todos={todos} setTodos={setTodos} />
+<Route path="/" exact component={TodoComplete} />
+<Route path="/custom" exact component={TaskComplete} />
+<Route path="/long" exact component={GoalComplete} />
 </Container>
 
 </Router>
