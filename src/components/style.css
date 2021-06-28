@@ -23,3 +23,8 @@ body{
 .todo-text{
     color:white;
 }
+
+.delete-button {
+    background-color: red;
+    color:white
+}

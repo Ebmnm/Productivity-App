@@ -6,6 +6,12 @@ import {BrowserRouter as Router} from "react-router-dom"
 import "./components/style.css"
 import TodoForm from './components/TodoForm';
 
+
+//TODO: 
+//Make a date input somehow... popup? prompt? on creation or onclick? 
+// style list/mobile
+//create routes in the nav and find out how to use the same functionallity with different state... copy everything but change state keyword todo??
+//how will we use diferent functionallity with the different routes? put it all in one component?
 const LOCAL_STORAGE_KEY = "todoApp.todos"
 
 const Container = styled.div`
@@ -32,12 +38,11 @@ function App() {
 
 
        
-
+//runs twice due to useeffect
   return (
 <Router>
 <Container>
 <Nav />
-{console.log("yoo")}
 <TodoForm todos={todos} setTodos={setTodos} />
 <TodoList todos={todos} setTodos={setTodos} />
 </Container>

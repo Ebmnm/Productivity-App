@@ -15,14 +15,19 @@ const todoNameRef = useRef()
         e.preventDefault()
         const name = todoNameRef.current.value
          if(name === "") return
-         console.log(setTodos)
          setTodos(prev => {
-             return [...prev, {id: uuid(), name: name, complete: false}]
+             return [...prev, {id: uuid(), name: name, complete: false, info:""}]
          })
          todoNameRef.current.value = null
      }
 
-    
+    function deleteCheckedTodo() {
+        let newTodos = [...todos]
+       newTodos = newTodos.filter(todo => {
+        return todo.complete === false
+        })
+        setTodos(newTodos)
+    }
 
     return (
         <div className="todo-form">
@@ -30,6 +35,7 @@ const todoNameRef = useRef()
             <input ref={todoNameRef} type="text" />
             <Inputbutton onClick={addTodo}>Add Todo</Inputbutton>
             </form>
+            <button className="delete-button" onClick={deleteCheckedTodo}>Delete Chehcked Todos </button>
         </div>
     )
 }
