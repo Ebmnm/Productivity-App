@@ -22,11 +22,19 @@ function setTodoInfo(id) {
         })               
 }
 
+function setTodoInput() {
+    todoInfoRef.current.value = todo.info
+}
+
+function onKeyUp(event) {
+    if (event.key === "Enter") {
+      setTodoInfo()
+    }
+}
     return (
         <>
-      <h1 className="delete-button"> hi, {todo.info} </h1>
-       <form>
-       <input type="text" ref={todoInfoRef}/>
+       <form >
+       <input onKeyPress={onKeyUp} type="text" ref={todoInfoRef} placeholder={todo.info ? todo.info : "Enter Info"} onClick={setTodoInput} />
        </form>
        <button onClick={closeInfo} className="delete-button" > Close </button>
        <button onClick={setTodoInfo}> Set Info</button>

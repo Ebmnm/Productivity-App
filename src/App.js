@@ -8,7 +8,6 @@ import TodoForm from './components/TodoForm';
 
 
 //TODO: 
-//Make a date input somehow... popup? prompt? on creation or onclick? 
 // style list/mobile
 //create routes in the nav and find out how to use the same functionallity with different state... copy everything but change state keyword todo??
 //how will we use diferent functionallity with the different routes? put it all in one component?
