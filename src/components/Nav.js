@@ -37,9 +37,9 @@ export default function Nav() {
     return (
         <div>
             <NavContainer>
-            <NavLink to="/todo"> Daily</NavLink>
-            <NavLink to="/custom" className="side-border"> Custom</NavLink>
-            <NavLink to="/long"> Long Term</NavLink>
+            <NavLink to="/Productivity-App"> Daily</NavLink>
+            <NavLink to="/Productivity-App/custom" className="side-border"> Custom</NavLink>
+            <NavLink to="/Productivity-App/long"> Long Term</NavLink>
             </NavContainer>
         </div>
     )
