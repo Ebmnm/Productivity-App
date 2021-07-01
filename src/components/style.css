@@ -1,6 +1,17 @@
-body{
-    background-color:blue;
+html{
+    background:linear-gradient(#5461AC, #01FE89);
+    background-repeat: no-repeat;
+    height: auto;
+    margin: 0;
+    width: 100vw;
+    font-family: 'Heebo', sans-serif;
+    box-sizing: border-box;
+    min-height: 100vh;
     
+}
+body{
+  width: 100vw;
+  position:fixed
 }
 
 .side-border {
@@ -17,14 +28,235 @@ body{
 }
 
 .todo-form{
-    background-color: chocolate;
+    display: flex;
+    margin-top: 3%;
+    border-width: 0px;
+  
 }
 
+
+.todo-form-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
 .todo-text{
     color:white;
+    font-weight: 500;
+    font-size: 1.3em;
 }
 
 .delete-button {
     background-color: red;
-    color:white
+    color:white;
+    font-weight: 700;
+    margin-top: 2.5%;
+    border-radius: 1em;
+    width: 20%;
+  padding: .4rem;
+  font-size: 1.3em;
+  cursor: pointer;
+  
+}
+
+.new-todo-input {
+    border:4px #0c9cac solid;
+    outline: none;
+    max-height: 45px;
+ border-left: 8px #0c9cac solid;
+font-size: 1.4em;
+}
+
+.add-button{
+    background-color: #0c9cac;
+    color: white;
+    font-weight: 800;
+    font-size: 1.1em;
+  padding: .5em 1.5em;
+  border:none;
+cursor: pointer;
+}
+
+.todo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3% auto;
+    margin-bottom: 1%;
+    padding:.1em;
+    width: 80%;
+    border-radius: 1em;
+    animation: pop .3s;
+    background: linear-gradient(
+        90deg,
+         rgb(13, 145, 52) 0%,
+        rgba(76, 228, 6, 0.801) 100%
+      );
+}
+
+.todo-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    cursor: pointer;
+  
+}
+
+
+.todo-container:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgb(241, 2, 42) 0% ,
+     rgb(255, 6, 6) 100%
+  );
+}
+
+.todo-container:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgba(17, 122, 255, 1) 0%,
+    rgba(20, 159, 255, 1) 100%
+  );
+}
+
+.todo-container:nth-child(4n + 3) {
+    background: linear-gradient(
+      90deg,
+      rgba(155, 0, 250, 1) 0%,
+       rgba(93, 12, 255, 1) 100%
+    );
+  }
+  
+ 
+  
+
+  .todo-input-date {
+   outline: none;
+   color:white;
+   background: transparent;
+   border:1px black;
+   font-weight: 500;
+   font-size: 1.2em;
+}
+
+::placeholder { 
+    color: white;
+    opacity: .86; 
+  }
+
+  .todo-input-info {
+    display: block;
+  outline: none;
+  color:black;
+  background: white;
+  border:1px black;
+  padding-bottom: 12vh;
+  font-size: 1.4rem;
+  width: 95%;
+
+  }
+
+  .info-button {
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    border-radius: 1em;
+    padding: .1em 1em;
+    cursor: pointer;
+  }
+
+  .info-container{
+    display: flex;
+    height: 30vh;
+    flex-direction: column;
+    min-width: 180px;
+    text-align: center;
+    animation: pop .3s;
+  }
+  @keyframes pop {
+    0%{
+      transform: scale(.1);
+    }
+    100%{
+      transform:scale(1);
+    }
+  }
+
+textarea::placeholder{
+  color: black;
+}
+
+.info-container .delete-button {
+  width:auto;
+  align-self: center;
+  text-align: center;
+}
+
+.todo-label input {
+  width:30px;
+  height:20px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width:830px){
+
+.todo-form-div{
+  flex-direction: column;
+}
+.new-todo-input{
+  width: 70%;
+}
+.add-button{
+  width: 20%;
+  padding: 0;
+}
+
+.delete-button{
+  width: 50%;
+  display: flex;
+  align-self: flex-end;
+  margin-right: 9%;
+font-size: .9em;
+justify-content: center;
+text-align: center;
+}
+
+.todo-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 3% auto;
+  margin-bottom: 1%;
+  padding:.1em;
+  width: 90%;
+  
+
+ 
+}
+.todo-input-date {
+
+ width: 80px;
+  font-size: 1em;
+}
+
+.todo-text{
+  font-size: 1em;
+}
+
+.info-container{
+padding-right:50%;
+
+}
+
+.todo-input-info{
+  height: 50px;
+}
+.todo-label input {
+  width:15px;
+  height:15px;
+  margin-right: 8px;
+}
 }

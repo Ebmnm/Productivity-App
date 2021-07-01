@@ -1,5 +1,5 @@
 import React, {useState, useRef}  from 'react'
-import TodoInfo from './TodoInfo'
+import TaskInfo from './TaskInfo'
 
 import "../style.css"
 
@@ -12,7 +12,7 @@ const dateRef = useRef()
 
     function handleTodoClick() {
         toggleTodo(tasks.id)
-        console.log(tasks)
+        
     }
 
 
@@ -32,10 +32,11 @@ const dateRef = useRef()
     }
 
    function saveDate() {
-console.log(tasks)
+
 settasks(prevTodos => {
     let newTodos = [...prevTodos]
     let todoDate = dateRef.current.value
+    if(todoDate === "") { todoDate = "Enter Date"}
         tasks.date = todoDate
             return newTodos
         })               
@@ -45,14 +46,16 @@ settasks(prevTodos => {
 
 
     return (
-        <div>
-            <label>
+        <div  className="todo-container">
+            <label  className="todo-label">
                 <input type="checkbox" checked={tasks.complete} onChange={handleTodoClick} />
                <p className="todo-text"> {tasks.name}</p>
             </label>
-           <input type="text" placeholder= {tasks.date ? `${tasks.date}` : "Date"} onChange={saveDate}  ref={dateRef}/>
-            <button onClick={openInfo}> Info </button>
-        {info ? <TodoInfo task={tasks} key={tasks.id} info={info} setInfo={setInfo} settasks={settasks}  /> : null}
+           <input className="todo-input-date" type="text" placeholder= {tasks.date ? `${tasks.date}` : "Enter Date"} onChange={saveDate}  ref={dateRef}/>
+            <button className="info-button" onClick={openInfo}> Info </button>
+        {info ? <TaskInfo task={tasks} key={tasks.id} info={info} setInfo={setInfo} settasks={settasks}  /> : null}
         </div>
     )
     }
+
+ 

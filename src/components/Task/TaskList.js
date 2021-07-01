@@ -1,5 +1,5 @@
 import React from 'react'
-import Todo from "./Todo"
+import Task from "./Task"
 export default function TodoList({tasks, settasks}) {
 
     function toggleTodo(id) {
@@ -13,7 +13,7 @@ export default function TodoList({tasks, settasks}) {
 
     return (
         tasks.map(tasks => {
-            return <Todo key={tasks.id} tasks={tasks} toggleTodo={toggleTodo} settasks={settasks}  />
+            return <Task key={tasks.id} tasks={tasks} toggleTodo={toggleTodo} settasks={settasks}  />
         })
     )
 }

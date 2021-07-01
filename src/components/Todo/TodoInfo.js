@@ -14,7 +14,7 @@ function closeInfo() {
 
 function setTodoInfo(id) {
     let todoInfo = todoInfoRef.current.value
-    if(todoInfo === "") return  
+    /* if(todoInfo === "") return   */
         setTodos(prevTodos => {
             let newTodos = [...prevTodos]
         todo.info = todoInfo
@@ -32,13 +32,13 @@ function onKeyUp(event) {
     }
 }
     return (
-        <>
+        <div className="info-container">
        <form >
-       <input onKeyPress={onKeyUp} type="text" ref={todoInfoRef} placeholder={todo.info ? todo.info : "Enter Info"} onClick={setTodoInput} />
+       <textarea className="todo-input-info" onKeyPress={onKeyUp} type="text" ref={todoInfoRef} placeholder={todo.info ? todo.info : "Enter Info"} onClick={setTodoInput} />
        </form>
+       <button className="info-button" onClick={setTodoInfo}> Set Info</button>
        <button onClick={closeInfo} className="delete-button" > Close </button>
-       <button onClick={setTodoInfo}> Set Info</button>
-       </>
+       </div>
     )
 }
 

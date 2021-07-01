@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from 'react'
-import TodoForm from "./TodoForm"
-import TodoList from "./TodoList"
+import GoalForm from "./GoalForm"
+import GoalList from "./GoalList"
 const LOCAL_STORAGE_KEY = "todoApp.goals"
 export default function TodoComplete() {
     const [goals, setgoals] = useState([])
@@ -17,8 +17,8 @@ export default function TodoComplete() {
 
     return (
         <div>
-            <TodoForm  goals={goals} setgoals={setgoals}/>
-            <TodoList  goals={goals} setgoals={setgoals}/>
+            <GoalForm  goals={goals} setgoals={setgoals}/>
+            <GoalList  goals={goals} setgoals={setgoals}/>
         </div>
     )
 }

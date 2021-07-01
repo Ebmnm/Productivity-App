@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from 'react'
-import TodoForm from "./TodoForm"
-import TodoList from "./TodoList"
+import TaskForm from "./TaskForm"
+import TaskList from "./TaskList"
 const LOCAL_STORAGE_KEY = "todoApp.tasks"
 export default function TodoComplete() {
     const [tasks, settasks] = useState([])
@@ -17,8 +17,8 @@ export default function TodoComplete() {
 
     return (
         <div>
-            <TodoForm  tasks={tasks} settasks={settasks}/>
-            <TodoList  tasks={tasks} settasks={settasks}/>
+            <TaskForm  tasks={tasks} settasks={settasks}/>
+            <TaskList  tasks={tasks} settasks={settasks}/>
         </div>
     )
 }

@@ -12,7 +12,7 @@ const dateRef = useRef()
 
     function handleTodoClick() {
         toggleTodo(todos.id)
-        console.log(todos)
+       
     }
 
 
@@ -32,10 +32,11 @@ const dateRef = useRef()
     }
 
    function saveDate() {
-console.log(todos)
+
 setTodos(prevTodos => {
     let newTodos = [...prevTodos]
     let todoDate = dateRef.current.value
+    if(todoDate === "") { todoDate = "Enter Date"}
         todos.date = todoDate
             return newTodos
         })               
@@ -45,13 +46,13 @@ setTodos(prevTodos => {
 
 
     return (
-        <div>
-            <label>
+        <div className="todo-container">
+            <label className="todo-label">
                 <input type="checkbox" checked={todos.complete} onChange={handleTodoClick} />
                <p className="todo-text"> {todos.name}</p>
             </label>
-           <input type="text" placeholder= {todos.date ? `${todos.date}` : "Date"} onChange={saveDate}  ref={dateRef}/>
-            <button onClick={openInfo}> Info </button>
+           <input className="todo-input-date" type="text" placeholder= {todos.date ? `${todos.date}` : "Enter Date"} onChange={saveDate}  ref={dateRef}/>
+            <button className="info-button" onClick={openInfo}> Info </button>
         {info ? <TodoInfo todo={todos} key={todos.id} info={info} setInfo={setInfo} setTodos={setTodos}  /> : null}
         </div>
     )

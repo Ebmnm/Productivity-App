@@ -1,13 +1,10 @@
 import React, { useRef} from 'react'
 
-import styled from 'styled-components'
+
 import uuid from "uuidv4"
 
 
-const Inputbutton = styled.button`
-background-color: red;
-`
-export default function TodoForm({goals, setgoals}) {
+export default function TodoForm({tasks, settasks}) {
 
 const todoNameRef = useRef()
 
@@ -15,27 +12,27 @@ const todoNameRef = useRef()
         e.preventDefault()
         const name = todoNameRef.current.value
          if(name === "") return
-         setgoals(prev => {
+         settasks(prev => {
              return [...prev, {id: uuid(), name: name, complete: false, info:""}]
          })
          todoNameRef.current.value = null
      }
 
     function deleteCheckedTodo() {
-        let newTodos = [...goals]
+        let newTodos = [...tasks]
        newTodos = newTodos.filter(todo => {
         return todo.complete === false
         })
-        setgoals(newTodos)
+        settasks(newTodos)
     }
 
     return (
-        <div className="todo-form">
-            <form>
-            <input ref={todoNameRef} type="text" />
-            <Inputbutton onClick={addTodo}>Add Goal</Inputbutton>
+        <div className="todo-form-div">
+            <form className="todo-form">
+            <input className="new-todo-input" ref={todoNameRef} type="text" />
+            <button className="add-button" onClick={addTodo}>Add Task</button>
             </form>
-            <button className="delete-button" onClick={deleteCheckedTodo}>Delete Checked Goals </button>
+            <button className="delete-button" onClick={deleteCheckedTodo}>Delete Checked Tasks </button>
         </div>
     )
 }

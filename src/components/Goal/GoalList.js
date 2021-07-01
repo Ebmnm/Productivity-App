@@ -1,5 +1,5 @@
 import React from 'react'
-import Todo from "./Todo"
+import Goal from "./Goal"
 export default function TodoList({goals, setgoals}) {
 
     function toggleTodo(id) {
@@ -13,7 +13,7 @@ export default function TodoList({goals, setgoals}) {
 
     return (
         goals.map(goals => {
-            return <Todo key={goals.id} goals={goals} toggleTodo={toggleTodo} setgoals={setgoals}  />
+            return <Goal key={goals.id} goals={goals} toggleTodo={toggleTodo} setgoals={setgoals}  />
         })
     )
 }

@@ -1,12 +1,10 @@
 import React, { useRef} from 'react'
 
-import styled from 'styled-components'
+
 import uuid from "uuidv4"
 
 
-const Inputbutton = styled.button`
-background-color: red;
-`
+
 export default function TodoForm({todos, setTodos}) {
 
 const todoNameRef = useRef()
@@ -30,12 +28,12 @@ const todoNameRef = useRef()
     }
 
     return (
-        <div className="todo-form">
-            <form>
-            <input ref={todoNameRef} type="text" />
-            <Inputbutton onClick={addTodo}>Add Todo</Inputbutton>
+        <div className="todo-form-div">
+            <form className="todo-form">
+            <input className="new-todo-input" ref={todoNameRef} type="text" />
+            <button className="add-button" onClick={addTodo}>Add Todo</button>
             </form>
-            <button className="delete-button" onClick={deleteCheckedTodo}>Delete Chehcked Todos </button>
+            <button className="delete-button" onClick={deleteCheckedTodo}>Delete Checked Todos </button>
         </div>
     )
 }

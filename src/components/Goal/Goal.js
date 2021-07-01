@@ -1,5 +1,5 @@
 import React, {useState, useRef}  from 'react'
-import TodoInfo from './TodoInfo'
+import GoalInfo from './GoalInfo'
 
 import "../style.css"
 
@@ -12,7 +12,7 @@ const dateRef = useRef()
 
     function handleTodoClick() {
         toggleTodo(goals.id)
-        console.log(goals)
+      
     }
 
 
@@ -32,10 +32,11 @@ const dateRef = useRef()
     }
 
    function saveDate() {
-console.log(goals)
+
 setgoals(prevTodos => {
     let newTodos = [...prevTodos]
     let todoDate = dateRef.current.value
+    if(todoDate === "") { todoDate = "Enter Date"}
         goals.date = todoDate
             return newTodos
         })               
@@ -45,14 +46,16 @@ setgoals(prevTodos => {
 
 
     return (
-        <div>
-            <label>
+        <div  className="todo-container">
+            <label className="todo-label">
                 <input type="checkbox" checked={goals.complete} onChange={handleTodoClick} />
                <p className="todo-text"> {goals.name}</p>
             </label>
-           <input type="text" placeholder= {goals.date ? `${goals.date}` : "Date"} onChange={saveDate}  ref={dateRef}/>
-            <button onClick={openInfo}> Info </button>
-        {info ? <TodoInfo goal={goals} key={goals.id} info={info} setInfo={setInfo} setgoals={setgoals}  /> : null}
+           <input className="todo-input-date" type="text" placeholder= {goals.date ? `${goals.date}` : "Date"} onChange={saveDate}  ref={dateRef}/>
+            <button className="info-button" onClick={openInfo}> Info </button>
+        {info ? <GoalInfo goal={goals} key={goals.id} info={info} setInfo={setInfo} setgoals={setgoals}  /> : null}
         </div>
     )
     }
+
+   
