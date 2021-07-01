@@ -37,7 +37,7 @@ export default function Nav() {
     return (
         <div>
             <NavContainer>
-            <NavLink to="/"> Daily</NavLink>
+            <NavLink to="/todo"> Daily</NavLink>
             <NavLink to="/custom" className="side-border"> Custom</NavLink>
             <NavLink to="/long"> Long Term</NavLink>
             </NavContainer>
