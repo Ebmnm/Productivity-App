@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Productivity-App/static/css/main.08f1e8a0.chunk.css",
-    "main.js": "/Productivity-App/static/js/main.c0c64c16.chunk.js",
-    "main.js.map": "/Productivity-App/static/js/main.c0c64c16.chunk.js.map",
+    "main.css": "/Productivity-App/static/css/main.933ca9d7.chunk.css",
+    "main.js": "/Productivity-App/static/js/main.5a8c3b44.chunk.js",
+    "main.js.map": "/Productivity-App/static/js/main.5a8c3b44.chunk.js.map",
     "runtime-main.js": "/Productivity-App/static/js/runtime-main.1d9c5942.js",
     "runtime-main.js.map": "/Productivity-App/static/js/runtime-main.1d9c5942.js.map",
     "static/js/2.58dc0ead.chunk.js": "/Productivity-App/static/js/2.58dc0ead.chunk.js",
     "static/js/2.58dc0ead.chunk.js.map": "/Productivity-App/static/js/2.58dc0ead.chunk.js.map",
     "index.html": "/Productivity-App/index.html",
-    "static/css/main.08f1e8a0.chunk.css.map": "/Productivity-App/static/css/main.08f1e8a0.chunk.css.map",
+    "static/css/main.933ca9d7.chunk.css.map": "/Productivity-App/static/css/main.933ca9d7.chunk.css.map",
     "static/js/2.58dc0ead.chunk.js.LICENSE.txt": "/Productivity-App/static/js/2.58dc0ead.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1d9c5942.js",
     "static/js/2.58dc0ead.chunk.js",
-    "static/css/main.08f1e8a0.chunk.css",
-    "static/js/main.c0c64c16.chunk.js"
+    "static/css/main.933ca9d7.chunk.css",
+    "static/js/main.5a8c3b44.chunk.js"
   ]
 }
