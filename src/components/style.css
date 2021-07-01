@@ -7,11 +7,13 @@ html{
     font-family: 'Heebo', sans-serif;
     box-sizing: border-box;
     min-height: 100vh;
-    
+    max-width: 100%
 }
 body{
-  width: 100vw;
-  
+  width: 100%;
+  overflow-x:hidden;
+  height: auto;
+ 
 }
 
 .side-border {
@@ -214,6 +216,8 @@ textarea::placeholder{
 
 .todo-form-div{
   flex-direction: column;
+  width: 95%;
+  margin: auto;
 }
 .new-todo-input{
   width: 70%;

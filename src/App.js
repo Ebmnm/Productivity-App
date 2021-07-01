@@ -15,16 +15,19 @@ import GoalComplete from "./components/Goal/GoalComplete"
 const Container = styled.div`
 width: 70vw;
 height: auto;
-background-color: #2E2727;
+background-color:#2E2727;
 margin:auto;
 top:0;
-left:15vw;
+
 padding-bottom: 3%;
 min-height:75vh;
 
 
-@media screen and (max-width:830px){
+@media screen and (max-width:600px){
 width: 90vw;
+position: absolute;
+left:5%;
+
 }
 `
 
