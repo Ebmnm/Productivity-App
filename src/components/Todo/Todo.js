@@ -47,8 +47,9 @@ setTodos(prevTodos => {
 
     return (
         <div className="todo-container">
+              <input className="checkbox" type="checkbox" checked={todos.complete} onChange={handleTodoClick} />
             <label className="todo-label">
-                <input type="checkbox" checked={todos.complete} onChange={handleTodoClick} />
+               {/*  <input type="checkbox" checked={todos.complete} onChange={handleTodoClick} /> */}
                <p className="todo-text"> {todos.name}</p>
             </label>
            <input className="todo-input-date" type="text" placeholder= {todos.date ? `${todos.date}` : "Enter Date"} onChange={saveDate}  ref={dateRef}/>

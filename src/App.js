@@ -21,6 +21,11 @@ top:0;
 left:15vw;
 padding-bottom: 3%;
 min-height:75vh;
+
+
+@media screen and (max-width:830px){
+width: 90vw;
+}
 `
 
 
