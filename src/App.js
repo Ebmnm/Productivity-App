@@ -35,7 +35,7 @@ function App() {
 <Router>
 <Container>
 <Nav />
-<Route path="/Productivity-App/"  component={TodoComplete} />
+<Route path="/Productivity-App/" exact  component={TodoComplete} />
 <Route path="/custom" exact component={TaskComplete} />
 <Route path="/long" exact component={GoalComplete} />
 </Container>
