@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Productivity-App/static/css/main.08f1e8a0.chunk.css",
-    "main.js": "/Productivity-App/static/js/main.af9323aa.chunk.js",
-    "main.js.map": "/Productivity-App/static/js/main.af9323aa.chunk.js.map",
+    "main.js": "/Productivity-App/static/js/main.6a665ef5.chunk.js",
+    "main.js.map": "/Productivity-App/static/js/main.6a665ef5.chunk.js.map",
     "runtime-main.js": "/Productivity-App/static/js/runtime-main.1d9c5942.js",
     "runtime-main.js.map": "/Productivity-App/static/js/runtime-main.1d9c5942.js.map",
     "static/js/2.58dc0ead.chunk.js": "/Productivity-App/static/js/2.58dc0ead.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.1d9c5942.js",
     "static/js/2.58dc0ead.chunk.js",
     "static/css/main.08f1e8a0.chunk.css",
-    "static/js/main.af9323aa.chunk.js"
+    "static/js/main.6a665ef5.chunk.js"
   ]
 }
