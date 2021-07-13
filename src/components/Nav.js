@@ -15,11 +15,13 @@ width: 33%;
 display: flex;
 justify-content: center;
 cursor: pointer;
+text-align:center;
 
 @media screen and (max-width:830px){
 font-size: 1em;
 min-height: 60px;
 align-items: center;
+
 
 }
 ` 

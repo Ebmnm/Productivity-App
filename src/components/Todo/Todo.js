@@ -52,7 +52,7 @@ setTodos(prevTodos => {
                {/*  <input type="checkbox" checked={todos.complete} onChange={handleTodoClick} /> */}
                <p className="todo-text"> {todos.name}</p>
             </label>
-           <input className="todo-input-date" type="text" placeholder= {todos.date ? `${todos.date}` : "Enter Date"} onChange={saveDate}  ref={dateRef}/>
+           <input className="todo-input-date" type="text" placeholder= {todos.date ? `${todos.date}` : "Enter Time"} onChange={saveDate}  ref={dateRef}/>
             <button className="info-button" onClick={openInfo}> Info </button>
         {info ? <TodoInfo todo={todos} key={todos.id} info={info} setInfo={setInfo} setTodos={setTodos}  /> : null}
         </div>
