@@ -9,26 +9,18 @@ const [info, setInfo] = useState(false)
 const dateRef = useRef()
  
 
-
     function handleTodoClick() {
         toggleTodo(todos.id)
-       
     }
 
 
     function createInfoPage(todo) {
         setInfo(true)
- //how can we render this???
   }
 
     function openInfo() {
-        //render a popup or we can make popup and use a class to show it.... for multiple though
-        // each popup will need data inside it for each todo so we need to use its id, create one for each id 
-        //create a info component?? append it to the page???
-       
         //this todos is refering to the todo clicked    @@@@@@@@@@@
         createInfoPage(todos)
-        
     }
 
    function saveDate() {
@@ -42,7 +34,6 @@ setTodos(prevTodos => {
         })               
 }
       
-  
 
 
     return (

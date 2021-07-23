@@ -7,8 +7,7 @@ import "./components/style.css"
 import TodoComplete from "./components/Todo/TodoComplete"
 import TaskComplete from "./components/Task/TaskComplete"
 import GoalComplete from "./components/Goal/GoalComplete"
-//TODO: 
-// style list/mobile
+
  
 
 
