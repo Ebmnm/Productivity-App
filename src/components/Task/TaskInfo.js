@@ -36,7 +36,7 @@ function onKeyUp(event) {
        <form >
        <textarea className="todo-input-info" onKeyPress={onKeyUp} type="text" ref={todoInfoRef} placeholder={task.info ? task.info : "Enter Info"} onClick={setTodoInput} />
        </form>
-       <button className="info-button" onClick={setTodoInfo}> Set Info</button>
+       <button className="info-button" onClick={setTodoInfo}> Save Info</button>
        <button onClick={closeInfo} className="delete-button" > Close </button>
        </div>
     )
