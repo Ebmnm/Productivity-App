@@ -10,7 +10,6 @@ export default function TodoList({todos, setTodos}) {
      }
 
 
-
     return (
         todos.map(todos => {
             return <Todo key={todos.id} todos={todos} toggleTodo={toggleTodo} setTodos={setTodos}  />

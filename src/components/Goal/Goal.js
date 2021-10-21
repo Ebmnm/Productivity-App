@@ -3,7 +3,6 @@ import GoalInfo from './GoalInfo'
 
 import "../style.css"
 
-
 export default function Todo({goals, setgoals, toggleTodo, setTodoInfo}) {
 const [info, setInfo] = useState(false)
 const dateRef = useRef()
@@ -13,18 +12,17 @@ const dateRef = useRef()
         toggleTodo(goals.id)
     }
 
-
     function createInfoPage(todo) {
         setInfo(true)
   }
 
     function openInfo() {
-        //this goals is refering to the todo clicked    @@@@@@@@@@@
+        //this goals is refering to the todo clicked    
         createInfoPage(goals)
     }
 
    function saveDate() {
-setgoals(prevTodos => {
+    setgoals(prevTodos => {
     let newTodos = [...prevTodos]
     let todoDate = dateRef.current.value
     if(todoDate === "") { todoDate = "Enter Date"}
@@ -33,7 +31,6 @@ setgoals(prevTodos => {
         })               
 }
       
-  
     return (
         <div  className="todo-container">
             <label className="todo-label">

@@ -9,8 +9,6 @@ export default function TodoList({tasks, settasks}) {
         settasks(newTodos)
      }
 
-
-
     return (
         tasks.map(tasks => {
             return <Task key={tasks.id} tasks={tasks} toggleTodo={toggleTodo} settasks={settasks}  />

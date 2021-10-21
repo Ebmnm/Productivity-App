@@ -1,12 +1,8 @@
 import React, { useRef} from 'react'
-
-
 import uuid from "uuidv4"
 
 
-
 export default function TodoForm({todos, setTodos}) {
-
 const todoNameRef = useRef()
 
     function addTodo(e) {

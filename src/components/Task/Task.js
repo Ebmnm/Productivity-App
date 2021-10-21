@@ -20,9 +20,8 @@ const dateRef = useRef()
   }
 
     function openInfo() {
-        //this tasks is refering to the tasks clicked    @@@@@@@@@@@
+        //this tasks is refering to the tasks clicked   
         createInfoPage(tasks)
-        
     }
 
    function saveDate() {

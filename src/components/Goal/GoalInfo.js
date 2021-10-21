@@ -2,10 +2,7 @@ import React, {useRef} from 'react'
 import "../style.css"
 
 
-
-
 export default function TodoInfo({goal, info, setInfo, setgoals}) {
-
 const todoInfoRef = useRef()
  
 function closeInfo() {

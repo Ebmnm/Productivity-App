@@ -10,7 +10,6 @@ export default function TodoList({goals, setgoals}) {
      }
 
 
-
     return (
         goals.map(goals => {
             return <Goal key={goals.id} goals={goals} toggleTodo={toggleTodo} setgoals={setgoals}  />

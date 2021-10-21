@@ -3,12 +3,10 @@ import styled from "styled-components"
 import Nav from "./components/Nav"
 import {BrowserRouter as Router, Route} from "react-router-dom"
 import "./components/style.css"
-
 import TodoComplete from "./components/Todo/TodoComplete"
 import TaskComplete from "./components/Task/TaskComplete"
 import GoalComplete from "./components/Goal/GoalComplete"
 
- 
 
 
 const Container = styled.div`
@@ -34,9 +32,6 @@ left:5%;
 
 function App() {
 
-
-       
-//runs twice due to useeffect
   return (
     
 <Router>

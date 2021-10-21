@@ -19,7 +19,7 @@ const dateRef = useRef()
   }
 
     function openInfo() {
-        //this todos is refering to the todo clicked    @@@@@@@@@@@
+        //this todos is refering to the todo clicked  
         createInfoPage(todos)
     }
 
@@ -34,7 +34,6 @@ setTodos(prevTodos => {
         })               
 }
       
-
 
     return (
         <div  className="todo-container">
