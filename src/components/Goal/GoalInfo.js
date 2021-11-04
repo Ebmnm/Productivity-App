@@ -1,4 +1,5 @@
 import React, {useRef} from 'react'
+import { getJSDocClassTag } from 'typescript'
 import "../style.css"
 
 
@@ -32,9 +33,8 @@ function onKeyUp(event) {
        
         <div className="info-container">
        <form >
-       <textarea className="todo-input-info" onKeyPress={onKeyUp} type="text" ref={todoInfoRef} placeholder={goal.info ? goal.info : "Enter Info"} onClick={setTodoInput} />
+       <textarea className="todo-input-info" onChange={setTodoInfo} onKeyPress={onKeyUp} type="text" ref={todoInfoRef} placeholder={goal.info ? goal.info : "Enter Info"}  onClick={setTodoInput} />
        </form>
-       <button className="info-button" onClick={setTodoInfo}> Save Info</button>
        <button onClick={closeInfo} className="delete-button" > Close </button>
         </div>
     )
