@@ -38,7 +38,7 @@ const dateRef = useRef()
                <p className="todo-text"> {goals.name}</p>
             </label>
            <input className="todo-input-date" type="text" placeholder= {goals.date ? `${goals.date}` : "Date"} onChange={saveDate}  ref={dateRef}/>
-            <button className="info-button" onClick={openInfo}> Info </button>
+            <div className="info-button" onClick={openInfo}>  {goals.info ? <div className='info-icon'></div> : null} Info </div>
         {info ? <GoalInfo goal={goals} key={goals.id} info={info} setInfo={setInfo} setgoals={setgoals}  /> : null}
         </div>
     )

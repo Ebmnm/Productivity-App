@@ -43,7 +43,7 @@ settasks(prevTodos => {
                <p className="todo-text"> {tasks.name}</p>
             </label>
            <input className="todo-input-date" type="text" placeholder= {tasks.date ? `${tasks.date}` : "Enter Date"} onChange={saveDate}  ref={dateRef}/>
-            <button className="info-button" onClick={openInfo}> Info </button>
+           <div className="info-button" onClick={openInfo}>  {tasks.info ? <div className='info-icon'></div> : null} Info </div>
         {info ? <TaskInfo task={tasks} key={tasks.id} info={info} setInfo={setInfo} settasks={settasks}  /> : null}
         </div>
     )

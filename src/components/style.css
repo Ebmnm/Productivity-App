@@ -170,7 +170,7 @@ cursor: pointer;
     border-radius: 1em;
     padding: .3em 1em;
     cursor: pointer;
-    min-height:30px;
+    display: flex;
   }
 
   .info-container{
@@ -281,5 +281,15 @@ padding-right:50%;
 
 .info-button{
   padding: .1em 1em;
+  text-align: center;
 }
+}
+
+.info-icon {
+  background-color: rgb(92, 243, 92);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+margin-top: 5px;
+margin-right: 5px;
 }

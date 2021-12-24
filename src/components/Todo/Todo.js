@@ -42,7 +42,7 @@ setTodos(prevTodos => {
                <p className="todo-text"> {todos.name}</p>
             </label>
            <input className="todo-input-date" type="text" placeholder= {todos.date ? `${todos.date}` : "Enter Date"} onChange={saveDate}  ref={dateRef}/>
-            <button className="info-button" onClick={openInfo}> Info </button>
+           <div className="info-button" onClick={openInfo}>  {todos.info ? <div className='info-icon'></div> : null} Info </div>
         {info ? <TodoInfo todo={todos} key={todos.id} info={info} setInfo={setInfo} setTodos={setTodos}  /> : null}
         </div>
     )

@@ -1,5 +1,4 @@
 import React, {useRef} from 'react'
-import { getJSDocClassTag } from 'typescript'
 import "../style.css"
 
 
